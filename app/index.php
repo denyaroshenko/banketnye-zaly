@@ -51,6 +51,23 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+
+<!-- set options before less.js script -->
+<script>
+  less = {
+    env: "development",
+    async: false,
+    fileAsync: false,
+    poll: 1000,
+    functions: {},
+    dumpLineNumbers: "comments",
+    relativeUrls: false,
+    rootpath: ":/a.com/"
+  };
+</script>
+<script src="assets/js/less/less.min.js"></script>
+
+
 <?php
 get_sidebar();
 get_footer();
