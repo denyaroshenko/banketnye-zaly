@@ -58,8 +58,9 @@
 @font-main: 'ProximaNova', sans-serif;
 
 // Цвета
-@color-main: #e8b858;
 @color-gray-bg: #f7f7f7;
+@color-gray-border: #eaeaea;
+@color-main: #e8b858;
 @red: 1px solid red;
 @green: 1px solid green;
 
@@ -73,6 +74,10 @@
 
 //Кнопки
 @border-radius: 100px;
+@color-button-text: @color-main;
+@color-button-bg-hover: @color-main;
+@color-button-bg: @color-main;
+@color-button-text-hover: #fff;
 
 .clearfix::after
 {
@@ -102,12 +107,18 @@ body
     position: relative;
 
     margin: 0;
-    // opacity: .5;
-    // background: url('http://tehas2.bobrick.ru/templates/tehass/resource/img/maket/maket-yelow.jpg') top center no-repeat;
+    opacity: .5;
+    background: url('/assets/img/maket/organization-retina.jpg') top center no-repeat;
+    background-size: contain;
+    max-width: 100%;
+    height: 3900px;
 }
 
 h2
 {
+  font-size: 26px;
+  font-weight: 700;
+
   text-align: center;
   &:after
   {
@@ -123,38 +134,35 @@ h2
   }
 }
 
+
 .bg-gray{
   background: @color-gray-bg;
 }
 
 .button{
-  padding: 10px 25px;
-}
-
-.container
-{
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    @media only screen and (min-width: @screen-size-lg)
-    {
-        max-width: @container-max-width;
-    }
+  padding: 11px 50px;
+  font-weight: 400;
 }
 
 .header
 {
   &__logo{
-    margin: 20px 0;
+    margin: 35px 15px;
+    width: 535px;
+    img{
+      width: 100%;
+    }
   }
   &__info
   {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .phone{
       font-size: 20px;
       color: #000;
       background: url('../img/icon-phone.png') left center no-repeat;
-      background-size: 15px;
+      background-size: 17px;
       padding-left: 25px;
       font-weight: 400;
     }
@@ -163,45 +171,57 @@ h2
       font-size: 16px;
       margin-top: 10px;
 
-      padding: 10px 25px;
+      padding: 10px 22px;
     }
   }
 }
 
 .main-nav
 {
+  margin-right: 15px;
+  margin-left: 15px;
+  z-index: 999;
+
   width: 100%;
 
+  background: #fff;
   box-shadow: 0 0 7px rgba(0,0,0,.17);
-  &__mobile{
+  &__mobile
+  {
     display: none;
   }
   &__list
   {
     display: flex;
 
+    margin: 0;
     padding: 0;
 
     list-style: none;
 
     justify-content: space-around;
-    margin: 0;
   }
   .menu-item
   {
-    font-size: 16px;
-    font-weight: 400;
-
-    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 500;
 
     color: #000;
     border-bottom: 4px solid rgba(0,0,0,0);
-    &:hover{
+    a
+    {
+      display: block;
+
+      margin: 13px 5px;
+    }
+    &:hover
+    {
       color: @color-main;
       border-bottom: 4px solid @color-main;
     }
   }
 }
+
 
 .banner
 {
@@ -212,43 +232,57 @@ h2
       display: flex;
       flex-direction: column;
 
-      height: 404px;
+      height: 700px;
 
       justify-content: center;
       align-items: flex-start;
     }
   }
   &__header{
-    font-size: 30px;
+    font-size: 38px;
     color: #fff;
-    font-weight: 400;
-    width: 50%;
+    font-weight: 300;
+    width: 70%;
   }
   &__btn{
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }
 
 .front-page__content{
   border-top: 4px solid @color-main;
-  margin-top: -70px;
   background: #fff;
   position: relative;
 }
 
-.content{
-  &__text{
+.content
+{
+  &__text
+  {
     font-size: 17px;
-    line-height: 32px;
     font-weight: 400;
-    p{
-      margin: 15px;
-      &:first-child{
-        margin-top: 30px;
+    line-height: 32px;
+    p
+    {
+      margin: 17px 60px;
+      font-size: 16px;
+      line-height: 34px;
+      &:first-child
+      {
+        margin-top: 45px;
       }
     }
   }
+  &__title
+  {
+    &-caption
+    {
+      font-size: 23px;
+      font-weight: 300;
+    }
+  }
 }
+
 
 .advantages
 {
@@ -285,12 +319,82 @@ h2
     margin-top: 10px;
     font-size: 15px;
     font-weight: 400;
-    line-height: 27px;
+    line-height: 25px;
 
     text-align: center;
+    p{
+      line-height: 30px;
+    }
   }
 }
 
+.places
+{
+  &__item{
+
+  }
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title
+  {
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  &__point
+  {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 36px;
+
+    padding-left: 15px;
+
+    text-decoration: underline;
+
+    color: @color-main;
+    background: url('../img/icon-placeholder-filled-point.png') left center no-repeat;
+    background-size: 10px;
+  }
+  &__img
+  {
+    width: 100%;
+    img
+    {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  &__description{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    border-bottom: 1px solid @color-gray-border;
+  }
+}
+
+.products{
+  &__item{
+    height: 245px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__btn{
+    cursor: pointer;
+    background: rgba(232,184,88,0.87);
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+  }
+}
 
 /*  --------------------------------------------------------
 PADDING STYLE
