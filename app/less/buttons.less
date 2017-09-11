@@ -6,6 +6,8 @@
 @color-button-text-hover: lighten(@color-button-text, 20);
 @color-button-text: black;
 
+@border-radius: 4px;
+
 .button
 {
   display: inline-table;
@@ -14,6 +16,7 @@
 
   cursor: pointer;
   text-decoration: none;
+  transition: .3s;
   &-default
   {
     color: @color-button-text;
@@ -26,7 +29,11 @@
   // Закругленные углы
   &-rounded
   {
-    border-radius: 3px;
+    border-radius: @border-radius;
+    color: #fff;
+    &:hover{
+      color: #fff;
+    }
   }
   // Кнопка с рамкой
   &-border
