@@ -5,7 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>Заголовок страницы</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-		<link rel="stylesheet" href="assets/css/normalize.css">
 		<link rel="stylesheet" href="assets/css/style.min.css">
 	</head>
 	<body>
@@ -44,15 +43,17 @@
 		</header>
 		<main>
 			<section>
-				<div class="row">
-					<div class="col">
-						<div class="banner mt-25">
-							<div class="banner__item" style="background: url('assets/img/slider-bg.png') center center no-repeat / cover">
-								<div class="banner__item-info container">
-									<div class="row">
-										<div class="col column mt-70">
-											<div class="banner__header">Организация свадьбы в банкетном зале "Шоколад" за 29 990 руб</div>
-											<div class="button button-default button-rounded banner__btn">Узнать подробнее</div>
+				<div class="container-fluid mt-25">
+					<div class="row">
+						<div class="col">
+							<div class="banner">
+								<div class="banner__item" style="background: url('assets/img/slider-bg.png') center center no-repeat / cover">
+									<div class="banner__item-info container">
+										<div class="row">
+											<div class="col column mt-70">
+												<div class="banner__header">Организация свадьбы в банкетном зале "Шоколад" за 29 990 руб</div>
+												<div class="button button-default button-rounded banner__btn">Узнать подробнее</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -208,7 +209,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="mt65">
+			<section class="mt65 mb35">
 				<div class="container">
 					<h2>Наши клиенты</h2>
 					<div class="row mt50">
@@ -228,31 +229,35 @@
 				</div>
 			</section>
 		</main>
-		<footer class="bg-gray mt40 pt40 pb40">
+		<footer class="bg-gray pt35 pb35">
 			<div class="container">
 				<div class="row">
 					<div class="column">
 						<div class="footer__logo">
 							<img src="assets/img/logo.png" alt="">
 						</div>
-						<div class="header__info">
+						<div class="footer__info">
 							<div class="column">
-								<a href="#">+7 (342) 203-23-31</a>
-								<a href="#" class="button">Заказать банкетный зал</a>
+								<a href="tel:+73422032331" class="phone">+7 (342) <b>203-23-31</b></a>
+								<a href="#" class="button button-default button-rounded">Заказать банкетный зал</a>
+								<div class="footer__copyrights">© 2007-2017 Все права защищены</div>
+								<a href="http://bobrick.su" class="footer__developers"><span>Создание сайта</span> - Студия Бобрик</a>
 							</div>
+
 						</div>
-						<div class="footer__copyrights">© 2007-2017 Все права защищены</div>
-						<a href="http://bobrick.su" class="footer__developers">Создание сайта - Студия Бобрик</a>
+
 					</div>
-					<div class="column">
-						<h3>Навигация по сайту:</h3>
-						<a href="#">Меню</a>
-						<a href="#">Кафе-Кафе</a>
-						<a href="#">Шоколад</a>
-						<a href="#">Услуги</a>
-						<a href="#">Условия</a>
-						<a href="#">Мероприятия под ключ</a>
-						<a href="#">Контактная информация</a>
+					<div class="column col-remainder footer__menu">
+						<div class="footer__header">Навигация по сайту:</div>
+						<ul>
+							<li><a href="#">Меню</a></li>
+							<li><a href="#">Кафе-Кафе</a></li>
+							<li><a href="#">Шоколад</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Условия</a></li>
+							<li><a href="#">Мероприятия под ключ</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>

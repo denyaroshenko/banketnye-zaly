@@ -38,6 +38,11 @@
   margin-right: auto;
   margin-left: auto;
 
+  &-fluid{
+    width: 100%;
+    overflow: hidden;
+  }
+
   @media only screen and (min-width: @screen-size-lg)
   {
     max-width: @container-max-width;
@@ -48,6 +53,7 @@
 {
   display: flex;
   flex-direction: column;
+  .indents();
 }
 
 .row
@@ -88,6 +94,7 @@
   &-remainder
   {
     flex: 1;
+    .indents;
   }
   &-sm
   {
